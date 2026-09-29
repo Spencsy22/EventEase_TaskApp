@@ -1,5 +1,6 @@
 @page "/Events/EventDetails/{eventID:int}"
 @inject EventManager eventManager;
+@inject NavigationManager navManager;
 @using EventEase_App.Services;
 
 @code
@@ -15,10 +16,34 @@
     {
         base.OnParametersSet();
         currentEvent = eventManager.ListEvents().FirstOrDefault<Event>(e => e.ID == eventID);
-        Console.WriteLine("Params set");
+        if(currentEvent == null)
+        {
+            navManager.NotFound();
+        }
     }
 }
 
-<h1>@currentEvent!.Name</h1>
-<h2>@currentEvent.Date - @currentEvent.Location</h2>
-<p>@currentEvent.Description</p>
+@if (currentEvent is not null)
+{
+    <section class="event-details" aria-labelledby="event-name">
+        <header class="detail-panel">
+            <p class="detail-label">Event name</p>
+            <h1 id="event-name">@currentEvent.Name</h1>
+        </header>
+
+        <dl class="detail-grid">
+            <div class="detail-panel">
+                <dt>Date</dt>
+                <dd>@currentEvent.Date</dd>
+            </div>
+            <div class="detail-panel">
+                <dt>Location</dt>
+                <dd>@currentEvent.Location</dd>
+            </div>
+            <div class="detail-panel description">
+                <dt>Description</dt>
+                <dd>@currentEvent.Description</dd>
+            </div>
+        </dl>
+    </section>
+}

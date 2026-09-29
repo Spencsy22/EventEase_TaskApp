@@ -33,20 +33,12 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sy/Documents/FullStackProjects/Blazor_For_FrontEnd/EventEase_App/Pages/AddEvent.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkRXZlbnQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Sy/Documents/FullStackProjects/Blazor_For_FrontEnd/EventEase_App/Pages/EventDetails.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnREZXRhaWxzLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Sy/Documents/FullStackProjects/Blazor_For_FrontEnd/EventEase_App/Pages/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Sy/Documents/FullStackProjects/Blazor_For_FrontEnd/EventEase_App/Pages/NotFound.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90Rm91bmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sy/Documents/FullStackProjects/Blazor_For_FrontEnd/EventEase_App/Pages/Register.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Sy/Documents/FullStackProjects/Blazor_For_FrontEnd/EventEase_App/_Imports.razor]
@@ -61,6 +53,18 @@ build_metadata.AdditionalFiles.CssScope = b-fc5w4qa2ty
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-u5iw3hj4fd
 
+[C:/Users/Sy/Documents/FullStackProjects/Blazor_For_FrontEnd/EventEase_App/Pages/AddEvent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkRXZlbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-68n9k92im6
+
 [C:/Users/Sy/Documents/FullStackProjects/Blazor_For_FrontEnd/EventEase_App/Pages/EventCard.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnRDYXJkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-7mdotnf0rb
+
+[C:/Users/Sy/Documents/FullStackProjects/Blazor_For_FrontEnd/EventEase_App/Pages/EventDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnREZXRhaWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-k6kpfpl38u
+
+[C:/Users/Sy/Documents/FullStackProjects/Blazor_For_FrontEnd/EventEase_App/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-gjctul7olj

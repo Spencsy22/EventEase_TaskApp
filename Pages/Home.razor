@@ -7,12 +7,13 @@
 
 <h1>Welcome to the EventEase App</h1>
 
-<span class="event_list">
+<p id="event-scroll-hint">Scroll left or right to browse events. You can also focus the list and use the arrow keys.</p>
+<div class="event_list" role="region" aria-label="Upcoming events" aria-describedby="event-scroll-hint" tabindex="0">
 @foreach(Event e in eventManager.ListEvents())
 {
     <EventCard currentEvent="e"/>
 }
-</span>
+</div>
 
 <button @onclick="OnClick">Add Event</button>
 

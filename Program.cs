@@ -4,6 +4,7 @@ using EventEase_App;
 using EventEase_App.Services;
 using System.Diagnostics.Tracing;
 
+
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");

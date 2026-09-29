@@ -1,0 +1,119 @@
+.add-event {
+    --label-width: 8rem;
+    --field-gap: 1.25rem;
+    box-sizing: border-box;
+    max-width: 44rem;
+    margin: 2rem auto;
+    padding: clamp(1.25rem, 4vw, 2.5rem);
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgb(15 23 42 / 8%);
+    color: #1e293b;
+}
+
+h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.intro {
+    margin-bottom: 2rem;
+    color: #64748b;
+}
+
+.form-field {
+    display: grid;
+    grid-template-columns: var(--label-width) minmax(0, 1fr);
+    gap: 0.5rem var(--field-gap);
+    align-items: start;
+    margin-bottom: 1.25rem;
+}
+
+.form-field label {
+    padding-top: 0.75rem;
+    font-weight: 600;
+}
+
+/* Blazor input components need ::deep for scoped styles. */
+.form-field ::deep input,
+.form-field ::deep textarea {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid #94a3b8;
+    border-radius: 8px;
+    background: #fff;
+    color: #0f172a;
+    font: inherit;
+    line-height: 1.5;
+}
+
+.form-field ::deep textarea {
+    resize: vertical;
+    min-height: 7rem;
+}
+
+.form-field ::deep input:focus,
+.form-field ::deep textarea:focus {
+    border-color: #4f46e5;
+    outline: 3px solid rgb(79 70 229 / 20%);
+    outline-offset: 1px;
+}
+
+.form-field ::deep .invalid {
+    border-color: #b91c1c;
+}
+
+.form-actions {
+    margin-left: calc(var(--label-width) + var(--field-gap));
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background: #4f46e5;
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4338ca;
+}
+
+button:focus-visible {
+    outline: 3px solid #4f46e5;
+    outline-offset: 3px;
+}
+
+.add-event ::deep .validation-errors {
+    margin-top: 1rem;
+    color: #b91c1c;
+}
+
+@media (max-width: 600px) {
+    .add-event {
+        margin: 1rem auto;
+    }
+
+    .form-field {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .form-field label {
+        padding-top: 0;
+    }
+
+    .form-actions {
+        margin-left: 0;
+    }
+
+    button {
+        width: 100%;
+    }
+}

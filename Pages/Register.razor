@@ -1,0 +1,26 @@
+@page "/register"
+
+
+@code
+{
+    public string Name {get; set;}
+    public string Email {get; set;}
+
+    public void HandleValidSubmit()
+    {
+    }
+}
+
+<h1>Registration Form</h1>
+
+<EditForm OnValidSubmit="HandleValidSubmit">
+    <label for="name">Name:</label>
+    <InputText @bind-Value="Name" class="Register_Name"/>
+    <br/>
+
+    <label for="email">Email:</label>
+    <InputText @bind-Value="Email" class="Register_Email"/>
+    <br/>
+
+    <button>Submit</button>
+</EditForm>

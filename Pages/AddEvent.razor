@@ -14,28 +14,37 @@
     }
 }
 
+<section class="add-event">
 <h1>Add an event</h1>
+<p class="intro">Enter the details for your next event.</p>
 
 <EditForm Model="@ev" OnValidSubmit="HandleValidSubmit">
     <DataAnnotationsValidator/>
 
+    <div class="form-field">
     <label for="name">Event Name:</label>
     <InputText id="name" @bind-Value="ev.Name"/>
-    <br/>
+    </div>
 
+    <div class="form-field">
     <label for="date">Date:</label>
     <InputDate id="date" @bind-Value="ev.Date"/>
-    <br/>
+    </div>
 
+    <div class="form-field">
     <label for="location">Location:</label>
     <InputText id="location" @bind-Value="ev.Location"/>
-    <br/>
+    </div>
 
+    <div class="form-field">
     <label for="description">Description:</label>
-    <InputTextArea id="description" @bind-Value="ev.Description"/>
-    <br/>
+    <InputTextArea id="description" rows="4" @bind-Value="ev.Description"/>
+    </div>
 
-    <button>Submit</button>
+    <div class="form-actions">
+        <button type="submit">Add event</button>
+    </div>
 
     <ValidationSummary/>
 </EditForm>
+</section>

@@ -1,6 +1,51 @@
-.eventcard
-{
-    height:20%;
-    width:20%;
-    background-color: #bababa;
+.eventcard {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 min(19rem, 85vw);
+    min-width: 0;
+    padding: 1.5rem;
+    border: 2px solid #3a0647;
+    border-radius: 16px;
+    background: linear-gradient(145deg, #fff, #f7f0fa);
+    box-shadow: 0 4px 12px rgb(58 6 71 / 12%);
+    color: #281333;
+    scroll-snap-align: start;
+    overflow-wrap: anywhere;
+}
+
+.eventcard h1 {
+    margin: 0 0 1.25rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.eventcard h3 {
+    margin: 0 0 0.75rem;
+    color: #65536d;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.eventcard button {
+    margin-top: auto;
+    padding: 0.7rem 1rem;
+    border: 1px solid #3a0647;
+    border-radius: 8px;
+    background: #3a0647;
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.eventcard button:hover {
+    background: #592369;
+}
+
+.eventcard button:focus-visible {
+    outline: 3px solid #7e4292;
+    outline-offset: 3px;
 }

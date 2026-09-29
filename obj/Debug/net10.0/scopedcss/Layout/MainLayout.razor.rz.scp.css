@@ -6,6 +6,7 @@
 
 main[b-fc5w4qa2ty] {
     flex: 1;
+    min-width: 0;
 }
 
 .sidebar[b-fc5w4qa2ty] {
@@ -53,6 +54,7 @@ main[b-fc5w4qa2ty] {
 
     .sidebar[b-fc5w4qa2ty] {
         width: 250px;
+        flex-shrink: 0;
         height: 100vh;
         position: sticky;
         top: 0;

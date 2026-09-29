@@ -1,0 +1,24 @@
+.event_list[b-gjctul7olj] {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 0.5rem 0.25rem 1.25rem;
+    margin-bottom: 1.5rem;
+    scroll-snap-type: x proximity;
+    scroll-padding-inline: 0.25rem;
+    scrollbar-color: #3a0647 #eee5f1;
+}
+
+.event_list:focus-visible[b-gjctul7olj] {
+    outline: 3px solid #7e4292;
+    outline-offset: 3px;
+    border-radius: 8px;
+}
+
+#event-scroll-hint[b-gjctul7olj] {
+    color: #65536d;
+    font-size: 0.95rem;
+    margin: 1rem 0 0.5rem;
+}
