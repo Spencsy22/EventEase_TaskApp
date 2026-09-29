@@ -11,6 +11,8 @@ public class Event
     [Required(ErrorMessage = "Location is required")]
     public string? Location {get; set;}
     public string? Description {get; set;}
+
+    public int Attending = 0;
 }
 
 public class EventManager

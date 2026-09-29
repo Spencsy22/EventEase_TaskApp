@@ -1,19 +1,12 @@
 @page "/register"
-
-
-@code
-{
-    public string Name {get; set;}
-    public string Email {get; set;}
-
-    public void HandleValidSubmit()
-    {
-    }
-}
+@using System.Runtime.InteropServices
+@using Microsoft.JSInterop
+@inject IJSRuntime JS
+@inject NavigationManager navManager;
 
 <h1>Registration Form</h1>
 
-<EditForm OnValidSubmit="HandleValidSubmit">
+<EditForm Model = "@this" OnValidSubmit="HandleValidSubmit">
     <label for="name">Name:</label>
     <InputText @bind-Value="Name" class="Register_Name"/>
     <br/>
@@ -24,3 +17,28 @@
 
     <button>Submit</button>
 </EditForm>
+
+@code
+{
+    public string Name {get; set;}
+    public string Email {get; set;}
+
+    public async Task HandleValidSubmit()
+    {
+        await JS.InvokeVoidAsync("localStorage.setItem", "registration.name", Name);
+
+        await JS.InvokeVoidAsync("localStorage.setItem", "registration.email", Email);
+
+        navManager.NavigateTo("/");
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if(!firstRender) return;
+
+        Name = await JS.InvokeAsync<string?>("localStorage.getItem", "registration.name") ?? "";
+        Email = await JS.InvokeAsync<string?>("localStorage.getItem", "registration.email") ?? "";
+
+        StateHasChanged();
+    }
+}

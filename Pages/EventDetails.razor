@@ -21,6 +21,13 @@
             navManager.NotFound();
         }
     }
+
+    public void HandleCLick()
+    {
+        currentEvent.Attending++;
+        navManager.NavigateTo("/");
+    }
+
 }
 
 @if (currentEvent is not null)
@@ -44,6 +51,12 @@
                 <dt>Description</dt>
                 <dd>@currentEvent.Description</dd>
             </div>
+            <div class="attending-counter">
+                <dt>Attending</dt>
+                <dd>@currentEvent.Attending</dd>
+            </div>
         </dl>
+
+        <button class="attend" @onclick="HandleCLick">Attending</button>
     </section>
 }
