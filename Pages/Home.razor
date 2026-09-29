@@ -1,0 +1,25 @@
+﻿@page "/"
+@using EventEase_App.Services
+@inject EventManager eventManager;
+@inject NavigationManager navManager;
+
+<PageTitle>Home</PageTitle>
+
+<h1>Welcome to the EventEase App</h1>
+
+<span class="event_list">
+@foreach(Event e in eventManager.ListEvents())
+{
+    <EventCard currentEvent="e"/>
+}
+</span>
+
+<button @onclick="OnClick">Add Event</button>
+
+@code
+{
+    public void OnClick()
+    {
+        navManager.NavigateTo("Events/AddEvent");
+    }
+}

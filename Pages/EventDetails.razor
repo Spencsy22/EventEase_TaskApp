@@ -1,0 +1,24 @@
+@page "/Events/EventDetails/{eventID:int}"
+@inject EventManager eventManager;
+@using EventEase_App.Services;
+
+@code
+{
+
+    [Parameter]
+    public int eventID {get; set;}
+
+    [Parameter]
+    public Event? currentEvent {get; set;}
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+        currentEvent = eventManager.ListEvents().FirstOrDefault<Event>(e => e.ID == eventID);
+        Console.WriteLine("Params set");
+    }
+}
+
+<h1>@currentEvent!.Name</h1>
+<h2>@currentEvent.Date - @currentEvent.Location</h2>
+<p>@currentEvent.Description</p>

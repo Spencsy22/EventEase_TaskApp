@@ -1,0 +1,41 @@
+@page "/Events/AddEvent"
+@inject EventManager manager;
+@inject NavigationManager navManager;
+@using EventEase_App.Services
+
+@code
+{
+    Event ev = new Event();
+
+    public void HandleValidSubmit()
+    {
+        manager.AddEvent(ev);
+        navManager.NavigateTo("/");
+    }
+}
+
+<h1>Add an event</h1>
+
+<EditForm Model="@ev" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator/>
+
+    <label for="name">Event Name:</label>
+    <InputText id="name" @bind-Value="ev.Name"/>
+    <br/>
+
+    <label for="date">Date:</label>
+    <InputDate id="date" @bind-Value="ev.Date"/>
+    <br/>
+
+    <label for="location">Location:</label>
+    <InputText id="location" @bind-Value="ev.Location"/>
+    <br/>
+
+    <label for="description">Description:</label>
+    <InputTextArea id="description" @bind-Value="ev.Description"/>
+    <br/>
+
+    <button>Submit</button>
+
+    <ValidationSummary/>
+</EditForm>
